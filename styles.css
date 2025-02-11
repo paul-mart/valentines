@@ -1,0 +1,103 @@
+
+
+.jersey-20-regular {
+    font-family: "Jersey 20", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+html {
+    background-color: pink;
+    font-family: "Jersey 20", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000,
+          -2px 2px 0 #000, 2px 2px 0 #000; color: white;
+    overflow: hidden; /* Prevent scrolling */
+}
+body {  overflow: hidden; /* Prevent scrolling */}
+
+.background-gif {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Send to back */
+}
+.content {
+    position: relative;
+    z-index: 1; /* Content above the GIF */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 2em;
+}
+.rotating-image {
+    width: 2.8rem; /* Size of UVST Heart*/
+    animation: rotateImage 2.3s infinite linear; /* Animation properties */
+}
+
+@keyframes rotateImage {
+    25% { transform: rotate(-30deg); }  /* Rotate 30 degrees left */
+    75% { transform: rotate(30deg); }   /* Rotate 30 degrees right */
+}
+
+.header-container {
+    display: flex;
+    align-items: center; /* Aligns items vertically */
+    justify-content: center; /* Centers horizontally */
+    gap: 1rem; /* Adds spacing between the h1 and image */
+}
+
+h1#top-text {
+    text-align: center;
+    color: white;
+    font-size: calc((.4em + 3vmin) + (.4em + 3vmax));
+    margin: 2rem;
+    white-space: nowrap; /* Prevents text from breaking */
+}
+
+h3 {
+    text-align: center;
+    color: white;
+    font-size: calc((.4em + 2vmin) + (.4em + 2vmax));
+    margin: 2rem;
+    white-space: nowrap; /* Prevents text from breaking */
+    text-shadow: -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000,
+    -1.5px 1.5px 0 #000, 1.5px 1.5px 0 #000; color: white;
+}
+.pixel-button {
+    font-size: 16px;
+    background-color: #b14343; 
+    color: black;
+    border: 4px solid black; /* Thick pixel-like border */
+    padding: 15px 30px;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: "Jersey 20", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000,
+          -2px 2px 0 #000, 2px 2px 0 #000; color: white;
+    display: inline-block;
+    box-shadow: 4px 4px 0px black; /* Adds a pixelated shadow */
+    transition: all 0.1s ease-in-out;
+    outline: none;
+    position: relative;
+}
+
+.pixel-button:hover {
+    background-color: #993b3b;
+    box-shadow: 2px 2px 0px black;
+    transform: translate(2px, 2px); /* Slight pixel-like press effect */
+}
+
+.pixel-button:active {
+    background-color: #b14343;
+    box-shadow: 0px 0px 0px black;
+    transform: translate(4px, 4px); /* Makes it look pressed */
+}
+
